@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-image: linear-gradient(to right,#5e8bd8, #ef43b8);
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 3px;
+}
+
+.title {
+    text-align: center;
+    font-weight: 100;
+    font-size: 56px;
+    text-transform: uppercase;
+    background: linear-gradient(to left, #5e8bd8 0%, #512e57 50%, #ef43b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #0B2349;
+    display: table;
+    margin: 20px auto;
+    font-family: 'Sigmar';
+    position: relative;
+    margin-top: 10vh;
+}
+
+.container {
+    height: 200px;
+    width: 60%;
+    max-width: 700px;
+    min-width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b1434330;
+    gap: 15px;
+    border: 5px solid transparent;
+    border-image: linear-gradient(to top left, #ef43b8 0%, #9c67a5 50%, #5e8bd8 100%);
+    border-image-slice: 1;
+    animation: background 1s infinite alternate;
+}
+
+@keyframes background {
+    100% {
+        border-image: linear-gradient(to top left, #5e8bd8 0%, #9c67a5 50%, #ef43b8 100%);
+        border-image-slice: 1;
+    }
+}
+
+.button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    transition: .4s;
+}
+
+.button_facebook {
+    background-color: #003cff9c;
+    box-shadow: 0 0 20px 5px #003cff;
+}
+
+.button_twitter {
+    background-color: #00ff6a90;
+    box-shadow: 0 0 20px 5px #00ff6a;
+}
+
+.button_telegram {
+    background-color: #f700ff8f;
+    box-shadow: 0 0 20px 5px #f700ff;
+}
+
+.icon {
+    position: absolute;
+    transition: .4s;
+}
+
+.text {
+    opacity: 0;
+    transition: .4s;
+    transform: scale(0, 0);
+    color: white;
+}
+
+.button_:hover {
+    width: 150px;
+    border-radius: 100px;
+}
+
+.button_facebook:hover {
+    width: 150px;
+    border-radius: 100px;
+    background-image: linear-gradient(to right,#80a7e9, #033dff);
+}
+
+.button_twitter:hover {
+    width: 150px;
+    border-radius: 100px;
+    background-image: linear-gradient(to right,#a7dab5, #13a724);
+}
+
+.button_telegram:hover {
+    width: 150px;
+    border-radius: 100px;
+    background-image: linear-gradient(to right,#dfa8cf, #c217c7);
+}
+
+.button:hover .text {
+    opacity: 1;
+    transform: scale(100%, 100%);
+}
+
+.button:hover .icon {
+    opacity: 0;
+}
+
+.girland {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.girland__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.line {
+    height: 27px;
+    width: 1px;
+    background-color: black;
+}
+
+.line_pick {
+    height: 12px;
+    width: 1px;
+    background-color: black;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #003cff9c;
+    box-shadow: 0 0 20px 5px #003cff;
+}
+
+.circle_pink {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #f700ff8f;
+    box-shadow: 0 0 20px 5px #f700ff;
+}
+
+@media (max-width: 450px) {
+    .title {
+        font-size: 36px;
+    }
+}
