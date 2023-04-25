@@ -3,15 +3,24 @@
 * {
     box-sizing: border-box;
     text-decoration: none;
+    padding: 0;
+    margin: 0;
 }
 
 body {
     background-image: linear-gradient(to right,#5e8bd8, #ef43b8);
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     letter-spacing: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px 10px;
+    height: 100vh;
 }
 
-.title {
+.title,
+.time {
     text-align: center;
     font-weight: 100;
     font-size: 56px;
@@ -19,24 +28,16 @@ body {
     background: linear-gradient(to left, #5e8bd8 0%, #512e57 50%, #ef43b8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: #0B2349;
-    display: table;
-    margin: 20px auto;
     font-family: 'Sigmar';
     position: relative;
-    margin-top: 10vh;
 }
 
 .container {
-    height: 200px;
-    width: 60%;
+    height: 250px;
+    width: 100%;
     max-width: 700px;
-    min-width: 350px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     background-color: #b1434330;
@@ -64,6 +65,8 @@ body {
     cursor: pointer;
     border: none;
     transition: .4s;
+    position: relative;
+    z-index: 5;
 }
 
 .button_facebook {
